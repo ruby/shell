@@ -6,9 +6,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Keiju ISHITSUKA"]
   spec.email         = ["keiju@ruby-lang.org"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{An idiomatic Ruby interface for common UNIX shell commands.}
+  spec.description   = %q{An idiomatic Ruby interface for common UNIX shell commands.}
+  spec.homepage      = "https://github.com/ruby/shell"
   spec.license       = "BSD-2-Clause"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
