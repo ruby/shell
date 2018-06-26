@@ -6,8 +6,8 @@ require "shell/version"
 Gem::Specification.new do |spec|
   spec.name          = "shell"
   spec.version       = Shell::VERSION
-  spec.authors       = ["SHIBATA Hiroshi"]
-  spec.email         = ["hsbt@ruby-lang.org"]
+  spec.authors       = ["Keiju ISHITSUKA"]
+  spec.email         = ["keiju@ruby-lang.org"]
 
   spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
   spec.description   = %q{TODO: Write a longer description or delete this line.}
