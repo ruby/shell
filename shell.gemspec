@@ -11,11 +11,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/ruby/shell"
   spec.license       = "BSD-2-Clause"
 
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  end
+  spec.files         = [".gitignore", ".travis.yml", "Gemfile", "LICENSE.txt", "README.md", "Rakefile", "bin/console", "bin/setup", "lib/shell.rb", "lib/shell/builtin-command.rb", "lib/shell/command-processor.rb", "lib/shell/error.rb", "lib/shell/filter.rb", "lib/shell/process-controller.rb", "lib/shell/system-command.rb", "lib/shell/version.rb", "shell.gemspec"]
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
