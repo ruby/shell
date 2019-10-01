@@ -11,7 +11,7 @@
 #
 
 class Shell # :nodoc:
-  VERSION = "0.7"
+  VERSION = "0.8.0"
   @RELEASE_VERSION = VERSION
   @LAST_UPDATE_DATE = "07/03/20"
 end
