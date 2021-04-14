@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
     "shell.gemspec",
   ]
   spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables   = []
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "e2mmap"
