@@ -32,11 +32,11 @@ require "shell/version"
 # under the +/tmp+ directory.
 #
 #   sh = Shell.cd("/tmp") # Change to the /tmp directory
-#   sh.mkdir "shell-test-1" unless sh.exists?("shell-test-1")
+#   sh.mkdir "shell-test-1" unless sh.exist?("shell-test-1")
 #   # make the 'shell-test-1' directory if it doesn't already exist
 #   sh.cd("shell-test-1") # Change to the /tmp/shell-test-1 directory
 #   for dir in ["dir1", "dir3", "dir5"]
-#     if !sh.exists?(dir)
+#     if !sh.exist?(dir)
 #       sh.mkdir dir # make dir if it doesn't already exist
 #       sh.cd(dir) do
 #         # change to the `dir` directory
@@ -59,10 +59,10 @@ require "shell/version"
 #
 #   sh = Shell.cd("/tmp")
 #   sh.transact do
-#     mkdir "shell-test-1" unless exists?("shell-test-1")
+#     mkdir "shell-test-1" unless exist?("shell-test-1")
 #     cd("shell-test-1")
 #     for dir in ["dir1", "dir3", "dir5"]
-#       if !exists?(dir)
+#       if !exist?(dir)
 # 	  mkdir dir
 # 	  cd(dir) do
 # 	    f = open("tmpFile", "w")
