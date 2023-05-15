@@ -157,8 +157,8 @@ class Shell
     #     sh[?e, "foo"]
     #     sh[:e, "foo"]
     #     sh["e", "foo"]
-    #     sh[:exists?, "foo"]
-    #     sh["exists?", "foo"]
+    #     sh[:exist?, "foo"]
+    #     sh["exist?", "foo"]
     #
     def test(command, file1, file2=nil)
       file1 = expand_path(file1)
@@ -360,7 +360,7 @@ class Shell
       return command if /^\// =~ command
       case path = @system_commands[command]
       when String
-        if exists?(path)
+        if exist?(path)
           return path
         else
           Shell.Fail Error::CommandNotFound, command
@@ -485,7 +485,7 @@ class Shell
     # * Shell#directory?(file)
     # * Shell#executable?(file)
     # * Shell#executable_real?(file)
-    # * Shell#exist?(file)/Shell#exists?(file)
+    # * Shell#exist?(file)
     # * Shell#file?(file)
     # * Shell#grpowned?(file)
     # * Shell#owned?(file)
