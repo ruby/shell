@@ -129,7 +129,7 @@ class Shell
     # call-seq:
     #   unlink(path)
     #
-    # See IO.unlink when +path+ is a file.
+    # See File.unlink when +path+ is a file.
     #
     # See Dir.unlink when +path+ is a directory.
     #
@@ -140,7 +140,7 @@ class Shell
       if File.directory?(path)
         Dir.unlink(path)
       else
-        IO.unlink(path)
+        File.unlink(path)
       end
       Void.new(@shell)
     end

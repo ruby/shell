@@ -86,6 +86,30 @@ class TestShell::CommandProcessor < Test::Unit::TestCase
     File.unlink(path)
   end
 
+  def test_unlink_file
+    name = "foo"
+    path = File.join(@tmpdir, name)
+    open(path, "w") {}
+
+    @shell.cd(@tmpdir)
+    assert_kind_of(Shell::Void, @shell.unlink(name))
+    assert_not_send([File, :exist?, path])
+  ensure
+    File.unlink(path) if File.exist?(path)
+  end
+
+  def test_unlink_directory
+    name = "foo"
+    path = File.join(@tmpdir, name)
+    Dir.mkdir(path)
+
+    @shell.cd(@tmpdir)
+    assert_kind_of(Shell::Void, @shell.unlink(name))
+    assert_not_send([File, :exist?, path])
+  ensure
+    Dir.rmdir(path) if File.exist?(path)
+  end
+
   def test_option_type
     name = 'foo.cmd'
     path = File.join(@tmpdir, name)
